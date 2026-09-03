@@ -1,0 +1,23 @@
+#bigContainer{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+}
+.smallcont{
+    border: 2px solid black;
+}
+.int{
+    border: 2px solid black;
+    display: flex;
+    padding: 15px;
+    flex: 1;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.box{
+    border:2px solid black;
+    height: 30px;
+    width: 100px;
+}
