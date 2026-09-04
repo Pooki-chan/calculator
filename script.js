@@ -1,10 +1,8 @@
 let operator;
 let numberOne;
 let numberTwo;
-let index;
+let number;
 let operatorClicked=false;
-let showString=" ";
-let temp=" ";
 // give numbers to them and display and add an event listener to all boxex who are indexed here
 const cont = document.querySelector("#container");
 for (let i = 0; i < 10; i++) {
@@ -15,30 +13,20 @@ for (let i = 0; i < 10; i++) {
     num.addEventListener("click",function (){
     const display= document.querySelector(".box");
     display.textContent+=`${i}`;// tius is a one line tast if forgto the namesss
+    number=display.textContent;//take the content and use it for number ONe and two so u can use it in math
     });
 }
-function clicked(){buttonClicked=true;}
 // buttonValuo updater
-function buttonsWork(){
-let menus =Document.querySelectorAll(".menu");
-for (let i=0;i<menus.lenght;i++)
+
+const menuList=document.querySelectorAll("#menu");
+for (let i=0;i<menuList.length;i++)
 {
-    menus[i].addEventListener("click",function(){
-        switch(menus[i]){
-        case '0':
-            operator="+"
-              case '1':
-                operator="-";
-                  case '2':
-                    operator="*";
-                      case '3':
-                        operator="/";
-        }
+    menuList[i].addEventListener("click",function(event){
     operatorClicked=true;
-    })
+    });
 }
 // we need to access the elements and buttons somehow without all of them activating yk
-}
+
 //update velues on screen 
 // stores indexes in a variable and adds them to an array
 //then the array may be displayed
