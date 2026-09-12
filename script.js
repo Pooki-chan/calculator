@@ -1,8 +1,8 @@
 let operator;
 let numberOne;
 let numberTwo;
-let number;
 let operatorClicked=false;
+let input;
 // give numbers to them and display and add an event listener to all boxex who are indexed here
 const cont = document.querySelector("#container");
 for (let i = 0; i < 10; i++) {
@@ -10,32 +10,50 @@ for (let i = 0; i < 10; i++) {
     num.classList.add("int");
     num.textContent = `${i}`;
     cont.appendChild(num);
+
+
     num.addEventListener("click",function (){
     const display= document.querySelector(".box");
-    display.textContent+=`${i}`;// tius is a one line tast if forgto the namesss
-    number=display.textContent;//take the content and use it for number ONe and two so u can use it in math
-    });
-}
-// buttonValuo updater
+    display.textContent+=`${i}`;
 
-const menuList=document.querySelectorAll("#menu");
+    // these divs dont exist so does their index
+    input=display.textContent;
+    // separates numbers
+    if(operatorClicked=false){
+    numberOne=input;
+    }
+    else{
+    numberTwo=input;
+    }
+    });
+  
+
+}
+//on operator button click we assign it a number and then pass onto operate function
+
+function assignOperator(i){
+operatorClicked=true;
+    operator=`${i}`;
+    operate(operator,numberOne,numberTwo);
+}
+
+
+const menuList=document.querySelectorAll(".menu");
+
 for (let i=0;i<menuList.length;i++)
 {
     menuList[i].addEventListener("click",function(event){
-    operatorClicked=true;
+    assignOperator(i);
     });
-}
-// we need to access the elements and buttons somehow without all of them activating yk
-
-//update velues on screen 
-// stores indexes in a variable and adds them to an array
-//then the array may be displayed
-//everythime one clicks on the button the index should be added but only on the clicked button not the entire array like the lo
-//should just go throught them not loop the code bruh 
-// we have a loop that gives them their numbers lets say now we need smt that collects them 
-//
     
-//logic 
+}
+
+
+
+
+    
+const display= document.querySelector(".box");
+//logic for operators
 function add(a,b){
 return a+b;
 }
@@ -48,17 +66,23 @@ function divide(a,b){
 return a/b;
 }
 
-
-//operate
+//operate function takes the operatir and gives it its function hte = should display result
 function operate(operator,numberOne,numberTwo){
     switch (operator){
-        case '+':
-            add(numberOne,numberTwo);
-        case '-':
-            substract(numberOne,numberTwo);
-        case '*':
-            multiply(numberOne,numberTwo);
-        case '/':
-            divide(numberOne,numberTwo);
+        case '1':
+            display.textContent+="+";
+            add(numberOne,numberTwo);break; 
+        case '2':
+            substract(numberOne,numberTwo);break;
+        case '3':
+            multiply(numberOne,numberTwo);break;
+        case '4':
+            divide(numberOne,numberTwo);break;
+        case '5':
+            display.textContent=`test`;
+            console.log("test"); 
+            
+            // testing the = and it needs to calculate stuff actually
     }
 }
+    

@@ -8,16 +8,27 @@
 .smallcont{
     border: 2px solid black;
 }
-.int{
-    border: 2px solid black;
+
+#container{
     display: flex;
+    align-items: center;
+    margin: 25px;
+}
+
+.int{
+    border: 2px solid rgb(255, 15, 15);
     padding: 15px;
-    flex: 1;
-    flex-wrap: wrap;
-    box-sizing: border-box;
 }
 .box{
-    border:2px solid black;
+    border:2px solid rgb(197, 21, 21);
     height: 30px;
     width: 100px;
+    flex-direction: row;
+    margin: 25px;
+}
+.menu{
+    border:2px solid rgb(39, 24, 255);
+    padding: 10px;
+    margin: 20 px;
+    display: inline;
 }
