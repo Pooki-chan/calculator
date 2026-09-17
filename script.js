@@ -46,6 +46,21 @@ operatorClicked=true;//this is crutial
 operator=`${i}`;/// this gives them index
 operatorAss(operator);
 }
+//the = shoudlve been a different button lol ig
+// clear button is however
+const bigdiv = document.querySelector(".bigDiv");
+const clearme=document.createElement("button");
+clearme.classList.add("menu");
+clearme.textContent="clear";
+bigdiv.appendChild(clearme);
+clearme.addEventListener("click",function(){
+    display.textContent=" ";
+    numberOne="";
+    numberTwo="";
+    operatorClicked=false;
+})
+
+
 
 let temp;
 function operatorAss(val){
@@ -68,7 +83,7 @@ function operatorAss(val){
             break; 
         case '4':
            actionMain(numberOne,numberTwo,temp);
-           display.textContent=result;
+           display.textContent=result.toFixed(3);
         break;
            
 }
