@@ -82,10 +82,17 @@ function operatorAss(val){
             temp="/";
             break; 
         case '4':
-           actionMain(numberOne,numberTwo,temp);
-           display.textContent=result.toFixed(3);
-        break;
-           
+            if (result==Infinity || result==NaN || result>12789112123){
+            display.textContent="Error try again";
+            }
+            else if(numberTwo==undefined){updatedisplay()}
+            else {
+            actionMain(numberOne,numberTwo,temp);
+            if (result%1!=0)
+            {display.textContent=result.toFixed(3);}
+            else{display.textContent=result;}
+            break;
+            }
 }
 }
 function actionMain(valueOne,valueTwo,opt){
@@ -103,6 +110,7 @@ function actionMain(valueOne,valueTwo,opt){
             result=divide(valueOne,valueTwo);
         break;
     }
+    
     console.log(result);
     numberOne=result;
     numberTwo=" ";
@@ -122,6 +130,6 @@ function divide(a,b){
 return Number(a)/Number(b);
 }
 let result;
-
+ 
 
 

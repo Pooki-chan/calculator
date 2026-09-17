@@ -1,34 +1,50 @@
 #bigContainer{
-
     display: flex;
-    align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
     border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    
 }
-.smallcont{
-    border: 2px solid black;
+.bigDiv{
+    border: 2px solid rgb(74, 221, 165);
+    width: 200px;
+    display: flex;
+    flex-direction: row;
 }
-
 #container{
     display: flex;
-    align-items: center;
-    margin: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    margin: 2px;
+    
+    
 }
-
 .int{
-    border: 2px solid rgb(255, 15, 15);
-    padding: 15px;
+    border: 2px solid rgb(68, 55, 255);
+    align-items:center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    margin: 3px;
+    display: flex;
+    
+
 }
 .box{
     border:2px solid rgb(197, 21, 21);
-    height: 30px;
-    width: 100px;
+    height: 20px;
+    width: 200px;
     flex-direction: row;
-    margin: 25px;
+    margin: 2px;
 }
 .menu{
     border:2px solid rgb(39, 24, 255);
-    padding: 10px;
-    margin: 20 px;
-    display: inline;
-}
+    justify-content: center;
+    margin: 2px;
+    display: flex;
+    flex-grow: 1;
+    }
